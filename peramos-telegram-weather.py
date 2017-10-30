@@ -28,8 +28,8 @@ def scrap():
     #return tabulate(values_list)
     div = page_soup.find_all("strong")   
     for value in div:
-        item = [value.text.strip()]
-        return item
+        item = value.text.strip()
+        return tabulate(item)
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print(msg, content_type, chat_type, chat_id, strftime("%a, %d %b %Y %H:%M:%S +0000"))
