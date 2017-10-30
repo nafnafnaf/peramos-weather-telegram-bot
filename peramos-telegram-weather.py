@@ -29,7 +29,7 @@ def scrap():
     div = page_soup.find_all("strong")   
     for value in div:
         item = value.text.strip()
-        index = list(enumerate(item))
+        index = enumerate(item)
         return index
 #tab
 def handle(msg):
