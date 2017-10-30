@@ -1,1 +1,1 @@
-peramos-telegram-weather.py
+bot: python3 peramos-telegram-weather.py
