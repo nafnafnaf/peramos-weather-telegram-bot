@@ -28,7 +28,7 @@ def scrap():
     #return tabulate(values_list)
     div = page_soup.find_all("strong")   
     for value in div:
-        item = value.text.strip()
+        item = value.text.strip().append("\n")
         return tabulate(item)
 #tab
 def handle(msg):
