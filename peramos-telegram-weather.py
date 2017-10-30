@@ -29,7 +29,7 @@ def scrap():
     div = page_soup.find_all("strong")   
     for div in page_soup:
         div = div.text.strip()
-        return div    #print(item)
+    return div    #print(item)
 #tab
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
