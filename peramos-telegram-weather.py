@@ -16,28 +16,24 @@ TOKEN= os.environ['TOKEN']
   #                    url_path=TOKEN)
 #updater.bot.set_webhook("https://meteokavgr.herokuapp.com/" + TOKEN)
 #updater.idle()
-
-def scrap():
-    url = "http://penteli.meteo.gr/stations/neaperamos/"
-    req = urlopen(url)
-    page = req.read()
-    req.close()
-    page_soup = soup(page, "html.parser")
+url = "http://penteli.meteo.gr/stations/neaperamos/"
+req = urlopen(url)
+page = req.read()
+req.close()
+page_soup = soup(page, "html.parser")
    # values_list = [
    # [page_soup.find_all("strong")[1].text.strip()+" "+page_soup.find_all("strong")[2].text.strip()]]
     #return tabulate(values_list)
-    div = page_soup.find_all("strong")   
-    for value in div:
-        item = [value.text.strip()]
-    for idx, val in enumerate(item):
-        return idx, val
+div = page_soup.find_all("strong")   
+item = [value.text.strip()]
+        
 #tab
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print(msg, content_type, chat_type, chat_id, strftime("%a, %d %b %Y %H:%M:%S +0000"))
 
     if content_type == 'text':
-        bot.sendMessage(chat_id, scrap())
+        bot.sendMessage(chat_id, item)
 
 
 bot = telepot.Bot(TOKEN)
