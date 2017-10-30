@@ -26,14 +26,14 @@ page_soup = soup(page, "html.parser")
     #return tabulate(values_list)
 div = page_soup.find_all("strong")   
 item = [div.text.strip()]
-        
+table = tabulate(item)
 #tab
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print(msg, content_type, chat_type, chat_id, strftime("%a, %d %b %Y %H:%M:%S +0000"))
 
     if content_type == 'text':
-        bot.sendMessage(chat_id, item)
+        bot.sendMessage(chat_id, table)
 
 
 bot = telepot.Bot(TOKEN)
