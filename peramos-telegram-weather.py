@@ -25,7 +25,7 @@ page_soup = soup(page, "html.parser")
    # [page_soup.find_all("strong")[1].text.strip()+" "+page_soup.find_all("strong")[2].text.strip()]]
     #return tabulate(values_list)
 div = page_soup.find_all("strong")   
-item = [div.text.strip()]
+item = div.text.strip()
 table = tabulate(item)
 #tab
 def handle(msg):
