@@ -26,9 +26,7 @@ def scrap():
    # values_list = [
    # [page_soup.find_all("strong")[1].text.strip()+" "+page_soup.find_all("strong")[2].text.strip()]]
     #return tabulate(values_list)
-    for tag in page_soup.find_all("tr")[2]:
-        tag = tag.text
-        return tag
+    return page_soup
 #tab
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
