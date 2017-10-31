@@ -29,12 +29,8 @@ def scrap():
 #for strong in page_soup("strong"):
 #    ...:     print(strong.text.strip(), strong.next_sibling)
 
-    div = page_soup.find_all("strong", recursive=False)
-    for div in page_soup:
-        div = div.text.strip()
-    for y in div:
-        x = y.text.strip()
-        return x#print(item)
+    for td in page_soup.find_all("td"):
+        return(td.text.strip())
 #tab
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
