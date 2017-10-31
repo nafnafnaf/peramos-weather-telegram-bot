@@ -26,8 +26,8 @@ def scrap():
    # values_list = [
    # [page_soup.find_all("strong")[1].text.strip()+" "+page_soup.find_all("strong")[2].text.strip()]]
     #return tabulate(values_list)
-    for tag in page_soup.find_all(re.compile("^st")):
-        x = tag.text
+    for td in page_soup.findChildren("td"):
+        x = td.text
     return x
     
 #tab
