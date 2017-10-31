@@ -1,4 +1,4 @@
-import os, sys, time, telepot, unicodedata, urllib3, random, re
+import os, sys, time, telepot, unicodedata, urllib3, random
 from telepot.loop import MessageLoop
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup as soup
@@ -16,24 +16,23 @@ TOKEN= os.environ['TOKEN']
   #                    url_path=TOKEN)
 #updater.bot.set_webhook("https://meteokavgr.herokuapp.com/" + TOKEN)
 #updater.idle()
-
-def scrap():
-    url = "http://penteli.meteo.gr/stations/neaperamos/"
-    req = urlopen(url)
-    page = req.read()
-    req.close()
-    page_soup = soup(page, "html.parser")
+url = "http://penteli.meteo.gr/stations/neaperamos/"
+req = urlopen(url)
+page = req.read()
+req.close()
+page_soup = soup(page, "html.parser")
    # values_list = [
    # [page_soup.find_all("strong")[1].text.strip()+" "+page_soup.find_all("strong")[2].text.strip()]]
     #return tabulate(values_list)
-    return page_soup.find("table").find_all("tr")
-#tab
+#for strong in page_soup("strong"):
+#    ...:     print(strong.text.strip(), strong.next_sibling)
+x = page_soup
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print(msg, content_type, chat_type, chat_id, strftime("%a, %d %b %Y %H:%M:%S +0000"))
 
     if content_type == 'text':
-        bot.sendMessage(chat_id, scrap())
+        bot.sendMessage(chat_id, x)
 
 
 bot = telepot.Bot(TOKEN)
