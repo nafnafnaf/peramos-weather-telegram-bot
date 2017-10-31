@@ -26,7 +26,8 @@ page_soup = soup(page, "html.parser")
     #return tabulate(values_list)
 #for strong in page_soup("strong"):
 #    ...:     print(strong.text.strip(), strong.next_sibling)
-x = page_soup.text.strip()[5]
+for tag in page_soup.find_all(re.compile("^st")):
+    x = tag.text
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print(msg, content_type, chat_type, chat_id, strftime("%a, %d %b %Y %H:%M:%S +0000"))
