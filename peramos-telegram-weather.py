@@ -27,7 +27,7 @@ def scrap():
    # [page_soup.find_all("strong")[1].text.strip()+" "+page_soup.find_all("strong")[2].text.strip()]]
     #return tabulate(values_list)
     for tag in page_soup.find_all("tr")[2]:
-        return tag
+        return tag.text
     
 #tab
 def handle(msg):
