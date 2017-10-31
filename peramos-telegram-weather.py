@@ -1,4 +1,4 @@
-import os, sys, time, telepot, unicodedata, urllib3, random
+import os, sys, time, telepot, unicodedata, urllib3, random, re
 from telepot.loop import MessageLoop
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup as soup
@@ -26,8 +26,8 @@ def scrap():
    # values_list = [
    # [page_soup.find_all("strong")[1].text.strip()+" "+page_soup.find_all("strong")[2].text.strip()]]
     #return tabulate(values_list)
-    for strong in page_soup("strong"):
-        return(strong.text.strip(), strong.next_sibling)
+    for tag in page_soup.find_all(re.compile("^st")):
+        return(tag.text)
 
     
 #tab
