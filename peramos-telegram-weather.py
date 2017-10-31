@@ -29,7 +29,7 @@ def scrap():
 #for strong in page_soup("strong"):
 #    ...:     print(strong.text.strip(), strong.next_sibling)
 
-    for td in page_soup.find_all("td"):
+    for td in page_soup.find("td"):
         x = td.text.strip()
     return x
 #tab
