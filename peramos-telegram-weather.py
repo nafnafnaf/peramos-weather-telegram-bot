@@ -30,8 +30,8 @@ def scrap():
 #    ...:     print(strong.text.strip(), strong.next_sibling)
 
     for td in page_soup.find("td"):
-        x = td.text.strip()
-    return x
+       # x = td.text.strip()
+    return td
 #tab
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
