@@ -26,11 +26,10 @@ def scrap():
    # values_list = [
    # [page_soup.find_all("strong")[1].text.strip()+" "+page_soup.find_all("strong")[2].text.strip()]]
     #return tabulate(values_list)
-#for strong in page_soup("strong"):
-#    ...:     print(strong.text.strip(), strong.next_sibling)
+    for strong in page_soup("strong"):
+        return(strong.text.strip(), strong.next_sibling)
 
-    lis = soup.find("td", recursive=False)
-    return lis
+    
 #tab
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
