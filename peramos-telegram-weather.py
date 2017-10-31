@@ -28,7 +28,7 @@ def scrap():
     #return tabulate(values_list)
     for td in page_soup.findNext("td"):
         x = td.text
-    return x
+        return x
     
 #tab
 def handle(msg):
