@@ -34,8 +34,7 @@ def scrap():
     #x = page_soup("td")[10].text.strip()
     #y = str(x)
     for td in page_soup("td"):
-        return td.text.strip()
-#tab
+        return td
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print(msg, content_type, chat_type, chat_id, strftime("%a, %d %b %Y %H:%M:%S +0000"))
