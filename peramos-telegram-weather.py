@@ -23,6 +23,9 @@ def scrap():
     page = req.read()
     req.close()
     page_soup = soup(page, "html.parser")
+    x = page_soup.findAll("tr")[4]
+    for item in x:
+        return item.text.strip()
    # values_list = [
    # [page_soup.find_all("strong")[1].text.strip()+" "+page_soup.find_all("strong")[2].text.strip()]]
     #return tabulate(values_list)
@@ -33,9 +36,9 @@ def scrap():
      #   return(tag.text)
     #x = page_soup("td")[10].text.strip()
     #y = str(x)
-    for tr in page_soup.find_all("tr"):
-        return tr.text
-
+   # for tr in page_soup.find_all("tr"):
+  #      return tr.text
+    
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print(msg, content_type, chat_type, chat_id, strftime("%a, %d %b %Y %H:%M:%S +0000"))
