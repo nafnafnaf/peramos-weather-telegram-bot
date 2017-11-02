@@ -31,7 +31,7 @@ def scrap():
 
     #for tag in page_soup.find_all(re.compile("^st")):
      #   return(tag.text)
-    x = page_soup("td")[2].find_all("p")[range(0,2)].text.strip()
+    x = page_soup("td")[2].text.strip()
     y = str(x)
     return y
 #tab
