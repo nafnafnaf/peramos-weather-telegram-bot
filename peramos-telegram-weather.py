@@ -31,9 +31,10 @@ def scrap():
 
     #for tag in page_soup.find_all(re.compile("^st")):
      #   return(tag.text)
-    x = page_soup("td", limit=11)
-    y = str(x)
-    return y
+    #x = page_soup("td")[10].text.strip()
+    #y = str(x)
+    for td in page_soup("td"):
+        return td.text.strip()
 #tab
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
