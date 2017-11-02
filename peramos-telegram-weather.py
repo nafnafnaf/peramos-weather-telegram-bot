@@ -24,7 +24,7 @@ def scrap():
     req.close()
     page_soup = soup(page, "html.parser")
     x = page_soup.findAll("tr")[4:]
-    for item in x[5:]:
+    for item in x:
         return item.text.strip()[0:]
 
    # values_list = [
