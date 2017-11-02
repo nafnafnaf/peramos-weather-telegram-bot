@@ -41,7 +41,7 @@ def handle(msg):
     print(msg, content_type, chat_type, chat_id, strftime("%a, %d %b %Y %H:%M:%S +0000"))
 
     if content_type == 'text':
-        bot.sendMessage(chat_id, y)
+        bot.sendMessage(chat_id, scrap())
 
 
 bot = telepot.Bot(TOKEN)
