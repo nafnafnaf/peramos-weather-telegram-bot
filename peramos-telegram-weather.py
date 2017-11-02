@@ -33,8 +33,8 @@ page_soup = soup(page, "html.parser")
      #   return(tag.text)
     #x = page_soup("td")[10].text.strip()
     #y = str(x)
-for span in page_soup.find_all("span"):
-    x = span.text.strip()
+for tr in page_soup.find_all("tr"):
+    x = tr.text
 #    return x
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
