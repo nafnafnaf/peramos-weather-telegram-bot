@@ -34,7 +34,8 @@ def scrap():
     #x = page_soup("td")[10].text.strip()
     #y = str(x)
     for tr in page_soup.find_all("tr"):
-        return tr.text
+        z= tr.text
+    return z
     #for item in x:
      #   return item.text.strip()
    # L=[page_soup.findAll("tr")]
