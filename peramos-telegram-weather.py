@@ -27,7 +27,7 @@ def scrap():
    # for item in x:
    #     return item.text.strip()
     for tr in page_soup.find_all("tr")[:]:
-        return tr[5:15]
+        return tr.text
 
 
    # values_list = [
