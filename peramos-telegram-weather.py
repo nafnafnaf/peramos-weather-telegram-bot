@@ -35,6 +35,7 @@ def scrap():
    # values_list = [
    # [page_soup.find_all("strong")[1].text.strip()+" "+page_soup.find_all("strong")[2].text.strip()]]
     #return tabulate(values_list)
+
 #for strong in page_soup("strong"):
 #    ...:     print(strong.text.strip(), strong.next_sibling)
 
