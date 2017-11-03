@@ -35,6 +35,7 @@ page_soup = soup(page, "html.parser")
     #y = str(x)
 for tr in page_soup.find_all("tr"):
     x = tr.text
+y=x
     #for item in x:
      #   return item.text.strip()
    # L=[page_soup.findAll("tr")]
@@ -62,7 +63,7 @@ def handle(msg):
     print(msg, content_type, chat_type, chat_id, strftime("%a, %d %b %Y %H:%M:%S +0000"))
 
     if content_type == 'text':
-        bot.sendMessage(chat_id, x)
+        bot.sendMessage(chat_id, y)
 
 
 bot = telepot.Bot(TOKEN)
