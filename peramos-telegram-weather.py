@@ -26,7 +26,8 @@ def scrap():
    # x = page_soup.findAll("tr")[0:10]
    # for item in x:
    #     return item.text.strip()
-    L=[for tr in page_soup.find_all("tr")]:
+    L=[page_soup.find_all("tr")]
+    for item in L:
         return tr.text
    # L = list(page_soup.find_all("tr"))
    # M = list(for tr in L:
