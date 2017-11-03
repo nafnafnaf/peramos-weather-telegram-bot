@@ -25,7 +25,7 @@ def scrap():
     page_soup = soup(page, "html.parser")
     x = page_soup.findAll("tr")[1:]
     for item in x:
-        return item.text.strip()[]
+        return item.text.strip()[0:]
 
    # values_list = [
    # [page_soup.find_all("strong")[1].text.strip()+" "+page_soup.find_all("strong")[2].text.strip()]]
