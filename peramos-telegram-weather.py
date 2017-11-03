@@ -23,11 +23,12 @@ def scrap():
     page = req.read()
     req.close()
     page_soup = soup(page, "html.parser")
-    x = list[page_soup.findAll("tr")]
+    x = page_soup.findAll("tr")[0:10]
     for item in x:
         return item.text.strip()
    # L=[page_soup.findAll("tr")]
-   # return L
+    #for item in L:
+     #   return item
    # L = list(page_soup.find_all("tr"))
    # M = list(for tr in L:
    #     return tr)
