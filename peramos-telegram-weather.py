@@ -17,6 +17,7 @@ TOKEN= os.environ['TOKEN']
 #updater.bot.set_webhook("https://meteokavgr.herokuapp.com/" + TOKEN)
 #updater.idle()
 
+
 #def scrap():
 url = "http://penteli.meteo.gr/stations/neaperamos/"
 req = urlopen(url)
