@@ -37,7 +37,7 @@ def scrap():
     for tr in page_soup.find_all("tr")[5:32]:
         x = tr.text.strip()
         return  tabulate(x)
-def printer(scrap()):
+def printer(scrap):
     print(scrap)
 #    return x
 def handle(msg):
