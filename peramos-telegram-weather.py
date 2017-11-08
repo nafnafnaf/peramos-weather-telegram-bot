@@ -51,6 +51,3 @@ MessageLoop(bot, handle).run_as_thread()
 print ('Listening ...')
 
 # Keep the program running.
-while 1:
-    time.sleep(120)
-
