@@ -36,7 +36,7 @@ def scrap():
     #y = str(x)
     for tr in page_soup.find_all("tr")[5:32]:
         x = [tr.text.strip()]
-        return [x]
+    return [x]
 
 #    return x
 def handle(msg):
