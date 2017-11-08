@@ -38,7 +38,7 @@ def scrap():
         x = tr.text.strip()
         table = tabulate(x)
 def printer(scrap):
-    print scrap.table
+    print(scrap.table)
 #    return x
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
