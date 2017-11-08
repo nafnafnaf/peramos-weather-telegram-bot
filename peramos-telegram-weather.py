@@ -27,16 +27,18 @@ def scrap():
     x = []
     for tr in page_soup.find_all("tr")[5:32]:
         x = tr.text.strip()
+        return x
 #        x = [tr.text.strip()]
-        print(x)
-
+       # print(x)
+def prin():
+    print(scrap())
 
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print(msg, content_type, chat_type, chat_id, strftime("%a, %d %b %Y %H:%M:%S +0000"))
 
     if content_type == 'text':
-        bot.sendMessage(chat_id, scrap())
+        bot.sendMessage(chat_id, prin())
 
 
 bot = telepot.Bot(TOKEN)
