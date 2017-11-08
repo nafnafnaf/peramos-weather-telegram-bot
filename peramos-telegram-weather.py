@@ -24,10 +24,11 @@ def scrap():
     page = req.read()
     req.close()
     page_soup = soup(page, "html.parser")
-
+    items = []
     for tr in page_soup.find_all("tr")[5:32]:
-        x = [tr.text.strip()]
-        print(x)
+        items = tr.text.strip()
+#        x = [tr.text.strip()]
+        return tabulate(items)
 
 
 def handle(msg):
