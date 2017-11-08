@@ -29,8 +29,7 @@ def scrap():
     while y>0:
         for tr in page_soup.find_all("tr")[5:32]:
             print(tr.text.strip())
-        
-        y=0
+            y=0    
 #        x = [tr.text.strip()]
        # print(x)
 def prin():
