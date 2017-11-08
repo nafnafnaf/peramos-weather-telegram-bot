@@ -25,10 +25,10 @@ def scrap():
     req.close()
     page_soup = soup(page, "html.parser")
 
-#    for tr in page_soup.find_all("tr")[5:32]:
-#        x = [tr.text.strip()]
-#    return [x]
-    return page_soup("tr")[5:32]
+    for tr in page_soup.find_all("tr")[5:32]:
+        x = [tr.text.strip()]
+        print(x)
+
 
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
