@@ -25,9 +25,12 @@ def scrap():
     req.close()
     page_soup = soup(page, "html.parser")
     x = []
-    for tr in page_soup.find_all("tr")[5:32]:
-        x = tr.text.strip()
-        
+    y = 1
+    while y>0:
+        for tr in page_soup.find_all("tr")[5:32]:
+            x = tr.text.strip()
+            return x
+        y=0
 #        x = [tr.text.strip()]
        # print(x)
 def prin():
