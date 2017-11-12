@@ -18,7 +18,7 @@ TOKEN= os.environ['TOKEN']
 #updater.idle()
 
 
-def scrap():
+def scrape():
     url = "http://penteli.meteo.gr/stations/neaperamos/"
     req = urlopen(url)
     page = req.read()
@@ -33,7 +33,7 @@ def handle(msg):
     print(msg, content_type, chat_type, chat_id, strftime("%a, %d %b %Y %H:%M:%S +0000"))
 
     if content_type == 'text':
-        bot.sendMessage(chat_id, scrap())
+        bot.sendMessage(chat_id, scrape())
 
 
 bot = telepot.Bot(TOKEN)
