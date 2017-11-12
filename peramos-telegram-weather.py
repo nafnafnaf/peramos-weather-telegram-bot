@@ -25,7 +25,8 @@ def scrap():
     req.close()
     page_soup = soup(page, "html.parser")
     for tr in page_soup.find_all("tr"):
-        print(tr.text)
+        return tr.text
+
         
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
