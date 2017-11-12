@@ -24,7 +24,8 @@ def scrape():
     page = req.read()
     req.close()
     page_soup = soup(page, "html.parser")
-    for tr in page_soup.findAll("tr")[9:14]:
+    for td in page_soup.findAll("td"):
+        for tr in td.page_soup.findAll("tr")
         return str(tr.text)
 
         
