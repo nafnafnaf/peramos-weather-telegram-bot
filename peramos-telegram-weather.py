@@ -26,7 +26,7 @@ def scrape():
     page_soup = soup(page, "html.parser")
     for td in page_soup.find_all("td"):
         for tr in td.page_soup.find_all("tr"):
-            return str(tr.text)
+            print(str(tr.text))
 
         
 def handle(msg):
