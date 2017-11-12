@@ -24,8 +24,8 @@ def scrape():
     page = req.read()
     req.close()
     page_soup = soup(page, "html.parser")
-    #for tr in page_soup.find_all("tr"):
-     #   return str(tr.text)
+    for tr in page_soup.find_all("tr"):
+        return str(tr.text)
 
         
 def handle(msg):
@@ -33,7 +33,7 @@ def handle(msg):
     print(msg, content_type, chat_type, chat_id, strftime("%a, %d %b %Y %H:%M:%S +0000"))
 
     if content_type == 'text':
-        bot.sendMessage(chat_id, "jo")
+        bot.sendMessage(chat_id, scrape())
 
 bot = telepot.Bot(TOKEN)
 #some_api = some_api_lib.connect(some_api_token)
@@ -41,3 +41,5 @@ MessageLoop(bot, handle).run_as_thread()
 print ('Listening ...')
 
 # Keep the program running.
+while 1:
+    time.sleep(120)
