@@ -24,8 +24,7 @@ def scrape():
     page = req.read()
     req.close()
     page_soup = soup(page, "html.parser")
-    for tr in page_soup.find_all("tr"):
-        x = str(tr.text)
+    x = page_soup.find_all("span", {"lang":"el"}).text
     return x
         
 def handle(msg):
