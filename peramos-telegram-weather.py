@@ -25,7 +25,7 @@ def scrap():
     req.close()
     page_soup = soup(page, "html.parser")
     for tr in page_soup.find_all("tr"):
-        return tr.text
+        return str(tr.text)
 
         
 def handle(msg):
