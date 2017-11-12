@@ -25,14 +25,14 @@ def scrape():
     req.close()
     page_soup = soup(page, "html.parser")
     x = page_soup.find_all("span", {"lang":"el"})
-    return x
+    #return x
         
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print(msg, content_type, chat_type, chat_id, strftime("%a, %d %b %Y %H:%M:%S +0000"))
 
     if content_type == 'text':
-        bot.sendMessage(chat_id, scrape())
+        bot.sendMessage(chat_id, x)
 
 bot = telepot.Bot(TOKEN)
 #some_api = some_api_lib.connect(some_api_token)
