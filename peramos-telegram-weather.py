@@ -18,14 +18,12 @@ TOKEN= os.environ['TOKEN']
 #updater.idle()
 
 
-def scrape():
-    url = "http://penteli.meteo.gr/stations/neaperamos/"
-    req = urlopen(url)
-    page = req.read()
-    req.close()
-    page_soup = soup(page, "html.parser")
-    x =[page_soup.find_all("span", {"lang":"el"})]
-    return x
+url = "http://penteli.meteo.gr/stations/neaperamos/"
+req = urlopen(url)
+page = req.read()
+req.close()
+page_soup = soup(page, "html.parser")
+x =[page_soup.find_all("span", {"lang":"el"})]
         
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
