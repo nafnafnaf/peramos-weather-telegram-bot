@@ -23,7 +23,7 @@ req = urlopen(url)
 page = req.read()
 req.close()
 page_soup = soup(page, "html.parser")
-x =[page_soup.find_all("span", {"lang":"el"}).text]
+x =[page_soup.find("span", {"lang":"el"}).text]
         
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
