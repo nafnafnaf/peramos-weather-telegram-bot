@@ -17,8 +17,7 @@ TOKEN= os.environ['TOKEN']
 #updater.bot.set_webhook("https://meteokavgr.herokuapp.com/" + TOKEN)
 #updater.idle()
 
-sys.getdefaultencoding()
-'utf-8'
+sys.getdefaultencoding('UTF8')
 def scrape():
     url = "http://penteli.meteo.gr/stations/neaperamos/"
     req = urlopen(url)
