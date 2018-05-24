@@ -16,8 +16,7 @@ TOKEN= os.environ['TOKEN']
   #                    url_path=TOKEN)
 #updater.bot.set_webhook("https://meteokavgr.herokuapp.com/" + TOKEN)
 #updater.idle()
-
-sys.getdefaultencoding()
+#sys.getdefaultencoding()
 def scrape():
     url = "http://penteli.meteo.gr/stations/neaperamos/"
     req = urlopen(url)
@@ -25,7 +24,7 @@ def scrape():
     req.close()
     page_soup = soup(page, "html.parser")
     x = page_soup.find_all("span", {"lang":"el"})
-    return x
+    return "hi"+x
         
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
