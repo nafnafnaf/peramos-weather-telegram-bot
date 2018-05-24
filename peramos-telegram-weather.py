@@ -23,8 +23,8 @@ def scrape():
     page = req.read()
     req.close()
     page_soup = soup(page, "html.parser")
-    x = "hithere"
-    #x = page_soup.find_all("span", {"lang":"el"})
+    #x = "hithere"
+    x = page_soup.find_all("span", {"lang":"el"})
     return x
         
 def handle(msg):
