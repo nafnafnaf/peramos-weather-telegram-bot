@@ -24,7 +24,8 @@ def scrape():
     req.close()
     page_soup = soup(page, "html.parser")
     #x = "hithere"
-    x = page_soup.find_all(["span", {"lang":"el"},"strong"])
+    #x = page_soup.find_all(["span", {"lang":"el"},"strong"])
+    x = page_soup.find('font', {'color':'#3366FF'}).text
     return str(x)
         
 def handle(msg):
