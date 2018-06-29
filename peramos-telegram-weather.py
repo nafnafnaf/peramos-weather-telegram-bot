@@ -27,8 +27,10 @@ def scrape():
     #x = page_soup.find_all(["span", {"lang":"el"},"strong"])
     #x = page_soup.find('font', {'color':'#3366FF'}).text
     #return str(x)
-    for tag in page_soup.find_all('font',{'color':'#3366FF'}):
-        return tabulate(tag)
+    #for tag in page_soup.find_all('font',{'color':'#3366FF'}):
+     #   return tabulate(tag)
+    newlist = [[i for i in page_soup.find_all('font',{'color':'#3366FF'})]for  j in tag.text.strip()]
+    return newlist
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print(msg, content_type, chat_type, chat_id, strftime("%a, %d %b %Y %H:%M:%S +0000"))
