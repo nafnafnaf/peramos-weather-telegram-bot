@@ -1,3 +1,4 @@
+#move to Gitlab
 import os, sys, time, telepot, unicodedata, urllib3, random, re
 from telepot.loop import MessageLoop
 from urllib.request import urlopen, Request
@@ -23,12 +24,6 @@ def scrape():
     page = req.read()
     req.close()
     page_soup = soup(page, "html.parser")
-    #x = "hithere"
-    #x = page_soup.find_all(["span", {"lang":"el"},"strong"])
-    #x = page_soup.find('font', {'color':'#3366FF'}).text
-    #return str(x)
-    #for tag in page_soup.find_all('font',{'color':'#3366FF'}):
-     #   return tabulate(tag)
     #newlist = [[i for i in page_soup.find_all('font',{'color':'#3366FF'})]for  j in tag])
     #newlist = [list(tag) for _ in page_soup.find_all('font',{'color':'#3366FF'})]
     newlist = []
