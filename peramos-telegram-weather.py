@@ -27,7 +27,7 @@ def scrape():
     #newlist = [[i for i in page_soup.find_all('font',{'color':'#3366FF'})]for  j in tag])
     #newlist = [list(tag) for _ in page_soup.find_all('font',{'color':'#3366FF'})]
     newlist = []
-    for tag in page_soup.find_all('font',{'color':'#3366FF'}):
+    for tag in page_soup.find_all('font',{'color':'#222'}):
         newlist.append(list(tag))
         return(newlist)
 def handle(msg):
